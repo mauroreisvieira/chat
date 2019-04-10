@@ -1,8 +1,9 @@
-var app = require('express')();
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
+const app = require('express')();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
+const PORT = 3000;
 
-server.listen('3001');
+server.listen(`${PORT}`);
 
 io.on('connection' , function (socket) {
     console.log('New User Has connected');

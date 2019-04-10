@@ -25,7 +25,6 @@
 
 <script>
 import Md5 from './../utils/md5.js'
-import Firebase from './../services/Firebase';
 export default {
     name: 'login',
     data() {
@@ -36,8 +35,7 @@ export default {
             userPhoto: '',
             nameValid: true,
             emailValid: true,
-            hash: new Md5(),
-            Firebase: new Firebase()
+            hash: new Md5()
         }
     },
     methods: {

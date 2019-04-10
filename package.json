@@ -1,12 +1,28 @@
 {
-  "scripts": {
-    "build": "next build",
-    "dev": "next",
-    "now-build": "next build"
-  },
+  "name": "feeling",
+  "version": "0.0.1",
+  "license": "MIT",
   "dependencies": {
     "next": "^8.0.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "vue": "^2.5.16",
+    "vue-loader": "14.2.2",
+    "vue-style-loader": "^4.1.0",
+    "vue-template-compiler": "^2.5.16",
+    "vuex": "^3.0.1",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "scripts": {
+    "now-star": "node server/app.js",
+    "star": "node server/app.js",
+    "watch": " webpack --watch --progress --mode development",
+    "dev": "node_modules/.bin/webpack-dev-server --config webpack.config.js --open --mode development",
+    "build": "node_modules/.bin/webpack --config webpack.config.js --mode production"
   }
 }

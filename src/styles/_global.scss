@@ -1,0 +1,62 @@
+* {
+  @include prefixr(box-sizing, border-box);
+}
+
+html, body, button {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-size: $fontSizeDefault;
+}
+
+body {
+  font-family: $fontDefault;
+  line-height: calculateRem(26px);
+  font-weight: $fontLight; // to thicken it a bit, we need to remove font-smoothing
+  color: $colorText;
+
+  @include baseline-grid();
+}
+
+pre {
+  background: $colorGrayBackground;
+  padding: 13px;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  height: calc(100% - #{$topBarHeight});
+}
+
+.main-container {
+  @include container(true);
+}
+
+.container {
+  @include container(true);
+}
+
+.container-medium {
+  @include medium {
+    @include container(true);
+  }
+}
+
+.container-small {
+  @include small-only {
+    @include container(true);
+  }
+}
+
+.content {
+  @include wide {
+    margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
+
+    & pre {
+      margin-right: -25.9%;
+    }
+  }
+}

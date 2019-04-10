@@ -1,0 +1,31 @@
+.login {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: $smallContainer;
+    margin: auto;
+
+    &__header {
+        width: 100%;
+        padding: $baseLine * 4;
+        padding-bottom: 0;
+    }
+
+    &__info {
+        padding-top: $baseLine * 2;
+        font-size: $fontMedium;
+        font-weight: $fontLight;
+        color: #A4A5A4;
+    }
+
+    &__body {
+        width: 100%;
+        padding: $baseLine * 4;
+        margin-top: $baseLine * 4;
+    }
+}

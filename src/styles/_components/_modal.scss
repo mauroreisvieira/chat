@@ -1,0 +1,32 @@
+.modal {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: .5;
+    display: none;
+    z-index: 991;
+
+    &.is-visible {
+        display: flex;
+    }
+
+    &__content {
+        position: absolute;
+        width: 100%;
+        max-width: $wideContainer;
+        padding: $baseLine * 4;
+        background: #fff;
+        display: flex;
+        z-index: 99;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translateY(-50%);
+        box-shadow: 0 0 6rem rgba(0, 0, 255, 0.1);
+    }
+}

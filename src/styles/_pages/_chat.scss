@@ -1,0 +1,139 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &__header {
+        display: flex;
+        position: relative;
+        padding: $baseLine * 4;
+
+        @include small-only {
+            padding: $baseLine * 2;
+        }
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #eee;
+            content: '';
+        }
+    }
+
+    &__messages {
+        flex-grow: 1;
+        padding: $baseLine * 4;
+        overflow: hidden;
+        overflow-y: auto;
+
+        @include small-only {
+            padding: $baseLine * 2;
+        }
+    }
+
+    &__photo {
+        position: relative;
+        width: $baseLine * 6;
+        min-width: $baseLine * 6;
+        height: $baseLine * 6;
+        overflow: hidden;
+        z-index: 2;
+
+        @include small-only {
+            width: $baseLine * 4;
+            min-width: $baseLine * 4;
+            height: $baseLine * 4;
+        }
+    }
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
+    &__content {
+        position: relative;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        padding: $baseLine * 2 $baseLine * 4;
+        margin-left: $baseLine * 2;
+        background-color: $colorChatContent;
+        border-radius: $baseLine * 3 $baseLine * 3 $baseLine * 3 0;
+
+        @include small-only {
+            padding: $baseLine * 2;
+            margin-left: $baseLine * 2;
+            border-radius: $baseLine * 2 $baseLine * 2 $baseLine * 2 0;
+        }
+    }
+
+    &__name {
+        font-size: $fontSmall;
+        font-weight: $fontBold;
+    }
+
+    &__time {
+        font-size: $fontSmall;
+        font-weight: $fontBold;
+        text-transform: lowercase;
+    }
+
+    &__text {
+        width: 100%;
+        margin-top: $baseLine;
+        font-size: $fontSmall;
+        font-weight: $fontRegular;
+        word-break: break-all;
+    }
+
+    &__user {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: $baseLine * 2;
+
+        &--myself {
+            flex-direction: row-reverse;
+
+            .chat__content {
+                margin-right: $baseLine * 2;
+                margin-left: 0;
+                background-color: $colorChatContentMySelf;
+                color: #fff;
+                border-radius: $baseLine * 3 $baseLine * 3 0;
+
+                @include small-only {
+                    padding: 12px;
+                    margin-right: 12px;
+                    border-radius: $baseLine * 2 $baseLine * 2 0;
+                }
+            }
+        }
+    }
+
+    &__actions {
+        position: relative;
+        padding: $baseLine * 4;
+
+        @include small-only {
+            padding: $baseLine $baseLine * 2;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #eee;
+            content: '';
+        }
+    }
+}

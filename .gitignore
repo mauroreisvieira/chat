@@ -1,0 +1,17 @@
+# macOS filesystem
+.DS_Store
+Thumbs.db
+
+# Editors and IDEs
+*.sublime-*
+*.code-workspace
+.vscode/
+.idea/
+
+# Generated folders
+node_modules/
+
+# Generated files
+*.log
+package-lock.json
+yarn.json

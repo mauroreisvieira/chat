@@ -1,0 +1,55 @@
+.form {
+    display: flex;
+    width: 100%;
+
+    &--login {
+        flex-direction: column;
+
+        .form__field {
+            margin-bottom: $baseLine * 4;
+        }
+    }
+
+    &__field {
+        flex-grow: 1;
+    }
+
+
+    &__label {
+        font-size: $fontXSmall;
+        text-transform: uppercase;
+        color: #A4A5A4;
+    }
+
+    &__input {
+        width: 100%;
+        padding: $baseLine * 2 0;
+        border: 0;
+        border-bottom: 2px solid #A4A5A4;
+        font-size: 1rem;
+        font-weight: $fontLight;
+        box-shadow: inset 0 0 0 1000px #fff;
+
+        &:focus {
+            outline: none;
+            border-color: $colorViolet;
+        }
+
+        &.is-invalid {
+            border-color: #F44336;
+        }
+    }
+
+    &__message {
+        width: 100%;
+        padding: $baseLine * 4 $baseLine * 2;
+        border: 0;
+        background: #0000;
+        font-size: $fontBase;
+        font-weight: $fontRegular;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

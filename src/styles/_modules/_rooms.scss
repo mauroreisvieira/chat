@@ -1,0 +1,30 @@
+.rooms {
+    position: relative;
+    flex-basis: $roomsWidth;
+    flex-direction: column;
+    padding: $baseLine * 4;
+    background-color: $colorViolet;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        width: $baseLine * 9;
+        height: $baseLine * 9;
+        margin: $baseLine 0;
+        background: #fff;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $colorViolet;
+        font-weight: $fontSemiBold;
+    }
+
+    @include small-only {
+        display: none;
+    }
+}

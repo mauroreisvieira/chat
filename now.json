@@ -1,1 +1,10 @@
-{"version":2,"name":"chat","builds":[{"src":"package.json","use":"@now/next"}]}
+{
+    "version":2,
+    "name":"chat",
+    "builds":[
+        {
+            "src":"api/index.js",
+            "use":"@now/node"
+        }
+    ]
+}

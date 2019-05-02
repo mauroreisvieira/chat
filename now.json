@@ -2,7 +2,6 @@
     "version":2,
     "name":"chat",
     "builds":[
-        { "src":"api/server.js", "use":"@now/node-server" },
         { "src": "*.html", "use": "@now/static" },
         { "src": "dist/main.min.js", "use": "@now/static" }
     ],

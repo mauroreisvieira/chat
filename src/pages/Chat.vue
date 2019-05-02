@@ -44,6 +44,7 @@
 
 <script>
 	import io from 'socket.io-client';
+	import micro from 'micro';
 	import Topbar from './../layout/Topbar.vue'
 	import Rooms from './../components/Rooms.vue'
 	export default {
@@ -61,7 +62,7 @@
 				messages: [],
 				users: [],
 				room: '',
-				socket : io('localhost:3001')
+				socket : io()
 			}
 		},
 		methods: {
